@@ -1,0 +1,68 @@
+body {
+    padding: 50px 20px 20px;
+    font-family: 'Ubuntu Mono', monospace;
+    color: #333333;
+}
+
+.green {
+    background-color: #295E52;
+    color: white;
+}
+
+.yellow {
+    background-color: #F2E085;
+}
+
+.orange {
+    background-color: #EE7F38;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.form-items {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+input {
+    width: 200px;
+    padding: 20px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 22px;
+}
+
+button {
+    border-radius: 0;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.hint-answer {
+    text-align: center;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.orange .hint-answer:after {
+    content: "\f063";
+    padding-left: 5px;
+    font-family: fontawesome;
+}
+
+.yellow .hint-answer:after {
+    content: "\f062";
+    padding-left: 5px;
+    font-family: fontawesome;
+}

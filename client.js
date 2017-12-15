@@ -3,9 +3,11 @@ $(document).ready(numberGuesserGame);
 function numberGuesserGame() {
   //event listener
   $('#guess_button').on('click', getUserNumber);
+  $('.hint-answer').on('click', '.play-again', resetGame);
 
   //Define our Number
-  var theNumber = 7;
+  var theNumber = Math.round(Math.random()* 9 + 1);
+
 
   //Get user value on button click
   function getUserNumber() {
@@ -28,23 +30,25 @@ function numberGuesserGame() {
         if(ourNumber == userGuess) {
           $('body').removeClass().addClass('green');
           $('.hint-answer').text('Correct!');
+          $('.hint-answer').append('<div><button class="play-again">Play again</button></div>');
         }
         //If not correct, check if greater or less than our number
+
+          //If user value is less, print 'Guess Higher' and change background color to orange
         else if (ourNumber > userGuess) {
           $('body').removeClass().addClass('orange');
           $('.hint-answer').text('Guess higher!');
         }
+          //If user value is greater, print 'Guess Lower' and change background color to yelllow
         else {
           $('body').removeClass().addClass('yellow');
           $('.hint-answer').text('Guess lower!');
         }
     }
 
-
-
-
-  //If user value is greater, print 'Guess Lower' and change background color to yelllow
-
-  //If user value is less, print 'Guess Higher' and change background color to orange
+}
+function resetGame() {
+  location.reload();
+  console.log('Supercali...');
 }
 //*HARD MODE* Add a new button to reset game

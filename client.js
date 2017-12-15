@@ -4,7 +4,11 @@ function numberGuesserGame() {
   //event listener
   $('#guess_button').on('click', getUserNumber);
   $('.hint-answer').on('click', '.play-again', resetGame);
-
+  $('#guess_input').keypress(function(e){
+    if(e.which==13) {
+      getUserNumber();
+    }
+  });
   //Define our Number
   var theNumber = Math.round(Math.random()* 9 + 1);
 

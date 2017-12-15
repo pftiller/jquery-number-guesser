@@ -56,13 +56,13 @@ button:hover {
 }
 
 .orange .hint-answer:after {
-    content: "\f063";
+    content: "\f062";
     padding-left: 5px;
     font-family: fontawesome;
 }
 
 .yellow .hint-answer:after {
-    content: "\f062";
+    content: "\f063";
     padding-left: 5px;
     font-family: fontawesome;
 }

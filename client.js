@@ -14,7 +14,7 @@ function numberGuesserGame() {
     console.log(userNumber);
     //Check to see if user value is between 1 and 10
     if (userNumber % 1 == 0 && userNumber > 0 && userNumber < 11) {
-      return userNumber;
+      compareValues(theNumber, userNumber);
     }
     //If not between 1 and 10, alert user (no decimals)
     else {
@@ -23,10 +23,25 @@ function numberGuesserGame() {
     $('#guess_input').val('').focus(); //clear input
   }
   //Compare user value to our Number
+    function compareValues(ourNumber, userGuess) {
+        //If correct, then update text and change background color to green
+        if(ourNumber == userGuess) {
+          $('body').removeClass().addClass('green');
+          $('.hint-answer').text('Correct!');
+        }
+        //If not correct, check if greater or less than our number
+        else if (ourNumber > userGuess) {
+          $('body').removeClass().addClass('orange');
+          $('.hint-answer').text('Guess higher!');
+        }
+        else {
+          $('body').removeClass().addClass('yellow');
+          $('.hint-answer').text('Guess lower!');
+        }
+    }
 
-  //If correct, then update text and change background color to green
 
-  //If not correct, check if greater or less than our number
+
 
   //If user value is greater, print 'Guess Lower' and change background color to yelllow
 
